@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from collections import Counter
+import os
 class KNN:
     def __init__(self,k=3):
         self.k = k
@@ -25,7 +26,8 @@ class KNN:
         predictions = self.predicts(X_test)
         return np.mean(predictions == y_test)
 knn = KNN()
-df = pd.read_csv('data/breastcancerdata.csv')
+filename = os.path.join(os.path.dirname(__file__), 'data', 'breastcancerdata.csv')
+df = pd.read_csv(filename)
 df.dropna(axis=1, how="all")
 
 X = df.drop(columns=['id','diagnosis']).values

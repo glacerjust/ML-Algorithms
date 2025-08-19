@@ -6,3 +6,4 @@ Each algorithm has its own folder with code, dataset, and a README.
 ## Algorithms included:
 
 - [KNN](./KNN)
+- [Linear Regression](./LinearRegression)
