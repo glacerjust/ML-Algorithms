@@ -1,12 +1,12 @@
-# KNN Algorithm Project
+# Support Vector Machine (SVM) Project
 
-This project implements a **K-Nearest Neighbors (KNN) algorithm** in Python. It demonstrates the basics of KNN on the **Breast Cancer Wisconsin dataset** from Kaggle.
+This project implements a **Support Vector Machine (SVM) algorithm** from scratch in Python. It demonstrates the classification of binary output by optimizing the Hinge Loss function with gradient descent on the **Breast Cancer Wisconsin dataset** from Kaggle.
 
 ---
 
 ## Dataset
 
-The dataset used in this project is located in the `data/` folder. It is used to train and evaluate the KNN algorithm implemented in `knn.py`.
+The dataset used in this project is located in the `data/` folder. It is used to train and evaluate the SVM model implemented in `SVM.py`.
 
 ### Dataset Description
 
@@ -17,22 +17,12 @@ The dataset used in this project is located in the `data/` folder. It is used to
 
 ### Usage
 
-To run the KNN algorithm:
-
+To run the SVM algorithm:
 
 ```bash
-#1. Clone the repository:
+# 1. Clone the repository:
 git clone https://github.com/glacerjust/ML-Algorithms
-#2. Navigate to the project directory:
-cd hello-github
-#3. Run the KNN script:
-python knn.py
-```
-
-Make sure the dataset (**dataset.csv**) is located in the data/ folder.
-
-### Notes
-
-This implementation is a from-scratch KNN algorithm for educational purposes.
-
-You can extend it by adding data preprocessing, scaling, or evaluation metrics.
+# 2. Navigate to the LogisticRegression directory:
+cd ML-Algorithms/LogisticRegression
+# 3. Run the script:
+python LogisticRegression.py

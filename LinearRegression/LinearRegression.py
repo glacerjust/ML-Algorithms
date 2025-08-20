@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 import os
-class Linear_Regression:
+class LinearRegression:
     def __init__(self,lr=0.001,epochs=20000):
         self.filename = os.path.join(os.path.dirname(__file__), 'data', 'housing.csv')
         self.df = None
@@ -68,7 +68,7 @@ class Linear_Regression:
         plt.legend()
         plt.title("Actual vs Predicted House Prices")
         plt.show()
-lr = Linear_Regression()
+lr = LinearRegression()
 lr.read()
 lr.scale_features()
 lr.train()

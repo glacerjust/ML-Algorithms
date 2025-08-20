@@ -6,7 +6,7 @@ This project implements a **Linear Regression algorithm** from scratch in Python
 
 ## Dataset
 
-The dataset used in this project is located in the `data/` folder. It is used to train and evaluate the Linear Regression model implemented in `linear_regression.py`.
+The dataset used in this project is located in the `data/` folder. It is used to train and evaluate the Linear Regression model implemented in `LinearRegression.py`.
 
 ### Dataset Description
 
@@ -21,8 +21,8 @@ To run the Linear Regression algorithm:
 
 ```bash
 # 1. Clone the repository:
-git clone https://github.com/glacerjust/hello-github.git
+git clone https://github.com/glacerjust/ML-Algorithms
 # 2. Navigate to the LinearRegression directory:
 cd ML-Algorithms/LinearRegression
 # 3. Run the script:
-python linear_regression.py
+python LinearRegression.py

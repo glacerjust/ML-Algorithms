@@ -7,3 +7,5 @@ Each algorithm has its own folder with code, dataset, and a README.
 
 - [KNN](./KNN)
 - [Linear Regression](./LinearRegression)
+- [Logistic Regression](./LogisticRegression/)
+- [SVM](./SVM/)
