@@ -9,3 +9,4 @@ Each algorithm has its own folder with code, dataset, and a README.
 - [Linear Regression](./LinearRegression)
 - [Logistic Regression](./LogisticRegression/)
 - [SVM](./SVM/)
+- [Naive Bayes](./NaiveBayes/)
