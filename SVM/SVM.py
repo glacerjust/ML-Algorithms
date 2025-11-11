@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
+from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 import os
 class SVM:
     def __init__(self,lr=0.001,epochs=1000,lamda=0.01):
@@ -73,18 +74,17 @@ class SVM:
         plt.title('SVM Decision Boundary')
         plt.show()
     
-    def plot_predictions(self):
+    def plot_confusion_matrix(self):
         """
-        Scatter plot of predicted vs actual labels
+        Plots the confusion matrix comparing predicted vs actual labels.
         """
         pred = self.predict()
-        plt.figure(figsize=(6,4))
-        plt.scatter(range(len(self.y)), self.y, label='Actual', marker='o', alpha=0.7)
-        plt.scatter(range(len(pred)), pred, label='Predicted', marker='x', alpha=0.7)
-        plt.xlabel('Sample Index')
-        plt.ylabel('Class')
-        plt.legend()
-        plt.title('Predicted vs Actual')
+        cm = confusion_matrix(self.y, pred, labels=[1, -1])  # Keep label order consistent
+        disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=['Malignant (1)', 'Benign (-1)'])
+        
+        plt.figure(figsize=(5, 4))
+        disp.plot(cmap='Blues', values_format='d')
+        plt.title('Confusion Matrix')
         plt.show()
 svm = SVM()
 svm.readfile()
@@ -95,4 +95,4 @@ print(svm.accuracy())
 svm.plot_decision_boundary(feature1_idx=0, feature2_idx=1)
 
 # Plot predicted vs actual
-svm.plot_predictions()
+svm.plot_confusion_matrix()
